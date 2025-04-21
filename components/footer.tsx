@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="border-t py-8 md:py-12">
       <div className="container flex flex-col md:flex-row justify-between items-center">
         <div className="mb-4 md:mb-0">
-          <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+          <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Anirudh Chidambaram. All rights reserved.</p>
         </div>
 
         <div className="flex items-center space-x-4">
@@ -31,4 +31,3 @@ export function Footer() {
     </footer>
   )
 }
-
