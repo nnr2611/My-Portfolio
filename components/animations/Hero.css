@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Share+Tech+Mono&display=swap');
+
+.custom-class {
+    font-family: 'Orbitron', 'Share Tech Mono', 'Courier New', monospace;
+    font-size: clamp(2rem, 6vw, 3rem);
+    /* Responsive size */
+    font-weight: 700;
+    overflow: visible;
+    letter-spacing: 0.02em;
+    text-align: center;
+
+    /* Optional visual flair */
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.3),
+        0 0 5px rgba(255, 0, 255, 0.3),
+        0 0 8px rgba(0, 255, 255, 0.2);
+    color: #fff;
+}
