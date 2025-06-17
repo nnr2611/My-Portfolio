@@ -19,8 +19,8 @@ export function Projects() {
         "An in-progress misinformation detection web app using React and Flask. Features include AI image detection, credibility scoring, and gamified learning.",
       image: "/images/dunder.jpg",
       tags: ["React", "Flask", "Python", "Gamification", "Misinformation Detection"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://dunderdebunk.pages.dev/",
+      // githubUrl: "#",
     },
     {
       title: "PixTag",
@@ -113,7 +113,7 @@ export function Projects() {
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
                 <CardContent className="p-6 flex flex-col flex-grow">

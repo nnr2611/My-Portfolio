@@ -1,7 +1,7 @@
 .glitch {
-    color: #3A29FF;
-    font-size: clamp(2rem, 10vw, 8rem);
-    white-space: nowrap;
+    color: #129781;
+    font-size: clamp(2rem, 10vw, 6rem);
+    white-space: normal;
     font-weight: 900;
     position: relative;
     margin: 0 auto;

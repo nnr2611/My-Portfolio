@@ -36,15 +36,19 @@ export function About() {
               </p>
 
               <Button
+                // onClick={() => {
+                //   const link = document.createElement('a');
+                //   // link.href = 'https://drive.google.com/uc?export=download&id=1s1PRzWGitXj-ATprW9A8LRZLrQeI7REK';
+                //   link.href = 'https://drive.google.com/file/d/1AY52ZX6Xt2l27sm2XGHXg3wj5ZbLv8lY/view';
+                //   link.download = 'Resume.pdf'; // Optional: set a default name for the downloaded file
+                //   link.click(); // Simulate click to trigger download
+                // }}
                 onClick={() => {
-                  const link = document.createElement('a');
-                  link.href = 'https://drive.google.com/uc?export=download&id=1s1PRzWGitXj-ATprW9A8LRZLrQeI7REK';
-                  link.download = 'Resume.pdf'; // Optional: set a default name for the downloaded file
-                  link.click(); // Simulate click to trigger download
+                  window.open('https://drive.google.com/file/d/1AY52ZX6Xt2l27sm2XGHXg3wj5ZbLv8lY/view', '_blank');
                 }}
               >
                 <Download className="h-4 w-4 mr-2" />
-                Download Resume
+                View my Resume
               </Button>
             </div>
           </div>
