@@ -45,6 +45,9 @@ export function Header() {
           <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
             Contact
           </Link>
+          <Link href="#whoami" className="text-sm font-medium hover:text-primary transition-colors">
+            Personal Life
+          </Link>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -96,6 +99,11 @@ export function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Contact
+            </Link>
+            <Link
+              href="#Whoami"
+              className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors">
+              Who am I
             </Link>
           </nav>
         </div>

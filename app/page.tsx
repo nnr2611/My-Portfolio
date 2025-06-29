@@ -5,6 +5,7 @@ import { Skills } from "@/components/skills"
 import { Projects } from "@/components/projects"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
+import { Whoami } from "@/components/whoami"
 import { SplashCursor } from "@/components/animations/SplashCursor"
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
           <About />
           <Skills />
           <Projects />
+          <Whoami />
           <Contact />
         </main>
         <Footer />
