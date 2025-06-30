@@ -14,9 +14,18 @@ export function Projects() {
   const [showAll, setShowAll] = useState(false);
   const projects = [
     {
+      title: "Class: Job Seeker",
+      description:
+        "A Next.js application which can track jobs, read your resume and give a cover letter, linkedin message and a personalised email",
+      image: "/images/job_tracker.jpg",
+      tags: ["Next.js", "MongoDb", "Gemini"],
+      liveUrl: "https://class-job-seeker.vercel.app/",
+      // githubUrl: "#",
+    },
+    {
       title: "Dunder Debunk",
       description:
-        "An in-progress misinformation detection web app using React and Flask. Features include AI image detection, credibility scoring, and gamified learning.",
+        "A misinformation detection web app using React and Flask. Features include A Card game battling misinformation, AI Credibility checking, credibility scoring, and gamified learning.",
       image: "/images/dunder.jpg",
       tags: ["React", "Flask", "Python", "Gamification", "Misinformation Detection"],
       liveUrl: "https://dunderdebunk.pages.dev/",
