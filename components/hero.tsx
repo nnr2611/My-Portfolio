@@ -49,7 +49,7 @@ export function Hero() {
                   enableOnHover={true}
                   className='custom-class'
                 >
-                  Chidambaram
+                  Nithish
                 </GlitchText> */}
               </h1>
 
