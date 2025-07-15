@@ -40,7 +40,7 @@ export function Hero() {
                   enableOnHover={true}
                   className='custom-class'
                 >
-                  Anirudh Chidambaram
+                  Nithish Ragav Narayana Shankar
                 </GlitchText>
                 {/* <br /> */}
                 {/* <GlitchText
@@ -55,7 +55,7 @@ export function Hero() {
 
               {/* <span className="text-primary max-w-2xl mb-8 leading-relaxed"></span> <br /> */}
               <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-8">
-                A Full Stack Developer and hands-on Engineer with a passion for building robust software systems and smart hardware solutions
+                An AI Engineer and Problem Solver passionate about building intelligent systems that bridge data, insight, and real-world impact.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild>
