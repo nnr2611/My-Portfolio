@@ -20,31 +20,25 @@ export function About() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20">
-                <Image src="/images/me2.jpg?height=320&width=320" alt="Profile" fill className="object-cover" />
+                <Image src="/images/me.jpg?height=320&width=320" alt="Profile" fill className="object-cover" />
               </div>
             </div>
             <div>
               <h3 className="text-3xl font-semibold mb-4">Who Am I</h3>
               <p className="text-muted-foreground text-lg mb-6">
-                I’m an electrical engineer turned software developer with a strong foundation in IT and a hands-on mindset. Whether I’m writing code, tuning circuits, or fine-tuning a go-kart, I thrive on building things that work, indeed work well.
+                I’m an electrical engineer turned AI developer with a passion for solving real-world problems using data, machine learning, and intelligent systems. Whether I’m designing predictive models, building GenAI chatbots, or experimenting with emerging tech, I thrive on creating tools that are not just functional but impactful.
               </p>
               <p className="text-muted-foreground text-lg mb-6">
-                My interests range from embedded systems and web development to AI-powered tools and misinformation detection platforms. I enjoy bridging the gap between hardware and software, combining analytical thinking with a maker’s curiosity.
+               My interests span from deep learning and time-series forecasting to natural language processing and trustworthy AI. I enjoy merging technical depth with practical application, blending a researcher’s mindset with an engineer’s drive to build.
               </p>
               <p className="text-muted-foreground text-lg mb-6">
-                I’m passionate about lifelong learning, problem-solving, and contributing to meaningful projects - whether that’s developing a serverless image tagging system, fixing a stubborn solder joint, or exploring how tech can build digital trust.
+                I’m a lifelong learner, driven by curiosity, critical thinking, and a desire to shape technology that matters — whether that’s deploying scalable ML pipelines, contributing to open-source, or exploring how LLMs can support sustainability, transparency, and digital trust.
+
               </p>
 
               <Button
-                // onClick={() => {
-                //   const link = document.createElement('a');
-                //   // link.href = 'https://drive.google.com/uc?export=download&id=1s1PRzWGitXj-ATprW9A8LRZLrQeI7REK';
-                //   link.href = 'https://drive.google.com/file/d/1AY52ZX6Xt2l27sm2XGHXg3wj5ZbLv8lY/view';
-                //   link.download = 'Resume.pdf'; // Optional: set a default name for the downloaded file
-                //   link.click(); // Simulate click to trigger download
-                // }}
                 onClick={() => {
-                  window.open('https://drive.google.com/file/d/1AY52ZX6Xt2l27sm2XGHXg3wj5ZbLv8lY/view', '_blank');
+                  window.open('https://drive.google.com/uc?export=download&id=1xxwb9vy1vTtx9auZYjoyTwlU9Aaqm1Ve', '_blank');
                 }}
               >
                 <Download className="h-4 w-4 mr-2" />
