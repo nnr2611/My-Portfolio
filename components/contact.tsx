@@ -84,10 +84,10 @@ export function Contact() {
                   <div>
                     <p className="font-medium">Email</p>
                     <a
-                      href="mailto:anirudh.chida@gmail.com"
+                      href="mailto:nithishragav2611@gmail.com"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      anirudh.chida@gmail.com
+                      nithishragav2611@gmail.com
                     </a>
                   </div>
                 </div>
@@ -96,8 +96,8 @@ export function Contact() {
                   <Phone className="h-5 w-5 text-primary mt-0.5" />
                   <div>
                     <p className="font-medium">Phone</p>
-                    <a href="tel:+61478478494" className="text-muted-foreground hover:text-primary transition-colors">
-                      +61478478494
+                    <a href="tel:+15873979364" className="text-muted-foreground hover:text-primary transition-colors">
+                      +15873979364
                     </a>
                   </div>
                 </div>
@@ -106,7 +106,7 @@ export function Contact() {
                   <MapPin className="h-5 w-5 text-primary mt-0.5" />
                   <div>
                     <p className="font-medium">Location</p>
-                    <p className="text-muted-foreground">Melbourne, Vic, AU</p>
+                    <p className="text-muted-foreground">Edmonton, AB, CA</p>
                   </div>
                 </div>
               </CardContent>
