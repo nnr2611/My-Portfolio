@@ -42,15 +42,7 @@ export function Hero() {
                 >
                   Nithish Ragav Narayana Shankar
                 </GlitchText>
-                {/* <br /> */}
-                {/* <GlitchText
-                  speed={1}
-                  enableShadows={true}
-                  enableOnHover={true}
-                  className='custom-class'
-                >
-                  Nithish
-                </GlitchText> */}
+               
               </h1>
 
               {/* <span className="text-primary max-w-2xl mb-8 leading-relaxed"></span> <br /> */}
