@@ -14,24 +14,24 @@ export function Projects() {
   const [showAll, setShowAll] = useState(false);
   const projects = [
     {
-      title: "Class: Job Seeker",
+      title: "Residential Load Forecasting",
       description:
-        "A Next.js application which can track jobs, read your resume and give a cover letter, linkedin message and a personalised email",
-      image: "/images/job_tracker.jpg",
-      tags: ["Next.js", "MongoDb", "Gemini"],
-      liveUrl: "https://class-job-seeker.vercel.app/",
-      // githubUrl: "#",
+        "Developed a hybrid LSTM + XGBoost model with transfer learning to forecast hourly residential power load, improving accuracy by 75% over baselines. ",
+      image: "/images/rlf.png",
+      tags: ["Python", "TensorFlow (LSTM)", "XGBoost"],
+      //liveUrl: "https://class-job-seeker.vercel.app/",
+      githubUrl: "https://github.com/nnr2611/Residential-Energy-Forecasting-LSTM-XGBoost-hybrid-model",
     },
     {
-      title: "Dunder Debunk",
+      title: "Air quality Predictor",
       description:
-        "A misinformation detection web app using React and Flask. Features include A Card game battling misinformation, AI Credibility checking, credibility scoring, and gamified learning.",
-      image: "/images/dunder.jpg",
-      tags: ["React", "Flask", "Python", "Gamification", "Misinformation Detection"],
-      liveUrl: "https://dunderdebunk.pages.dev/",
-      // githubUrl: "#",
+        "Built a real-time forecasting tool for PM2.5/PM10 levels using time-series ML and Random Forest Regression. Features a Flask dashboard with interactive graphs.",
+      image: "/images/airquality.png",
+      tags: ["Python", "Scikit-learn", "Flask", "Pandas", "Matplotlib"],
+      //liveUrl: "https://dunderdebunk.pages.dev/",
+      githubUrl: "https://github.com/nnr2611/Air-Pollution-prediction",
     },
-    {
+    {/*
       title: "PixTag",
       description:
         "An AWS-powered serverless image tagging and storage system with YOLO-based object detection and API-driven tag management.",
@@ -39,23 +39,23 @@ export function Projects() {
       tags: ["AWS Lambda", "DynamoDB", "S3", "Python", "JavaScript", "YOLO"],
       // liveUrl: "#",
       githubUrl: "#",
-    },
-    {
+    */},
+    {/*
       title: "MealMate - Android Diet Planner",
       description:
         "A personalized diet planner app with Firebase login, Edamam API integration, and dynamic meal suggestions using Kotlin & Jetpack Compose.",
       image: "/images/mealmate.jpg",
       tags: ["Kotlin", "Jetpack Compose", "Firebase", "Edamam API", "Android"],
       githubUrl: "#",
-    },
-    {
+    */},
+    {/*
       title: "PETris - PET Scan Appointment Platform",
       description:
         "A fullstack booking platform for medical imaging services built with ASP.NET MVC and MS SQL, increasing clinic revenue and efficiency.",
       image: "/images/petris.jpg",
       tags: ["C#", "ASP.NET MVC", "MS SQL", "JavaScript", "HTML", "CSS"],
       githubUrl: "#",
-    },
+    */},
     {
       title: "Motor Controller for Switched Reluctance Motor",
       description:
@@ -78,22 +78,6 @@ export function Projects() {
         "Designed and fabricated an electric vehicle for FSEV 2020 using BLDC motor and CAN bus controller. Focused on safety and performance.",
       image: "/images/formula-ev.jpg",
       tags: ["Electric Vehicles", "CAN Bus", "Embedded Systems", "Battery Systems"],
-    },
-    {
-      title: "FMD Detection in Cattle using FPGA",
-      description:
-        "Developed a system using FPGA to detect Foot and Mouth Disease in cattle with image processing and sensor inputs.",
-      image: "/images/fmd.jpg",
-      tags: ["FPGA", "VHDL", "Image Processing", "IoT"],
-      githubUrl: "#",
-    },
-    {
-      title: "Chip-8 Emulator",
-      description:
-        "Created a virtual microprocessor emulator in C that runs 8-bit sprite-based games from the 70s/80s. Supports basic commands and memory operations.",
-      image: "/images/chip8.jpg",
-      tags: ["C", "Emulation", "Microprocessor", "Low-level Programming"],
-      githubUrl: "#",
     },
   ]
   const visibleProjects = showAll ? projects : projects.slice(0, 3);
