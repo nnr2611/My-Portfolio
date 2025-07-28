@@ -26,16 +26,14 @@ export function About() {
             <div>
               <h3 className="text-3xl font-semibold mb-4">Who Am I</h3>
               <p className="text-muted-foreground text-lg mb-6">
-                I’m an electrical engineer turned AI developer with a passion for solving real-world problems using data, machine learning, and intelligent systems. Whether I’m designing predictive models, building GenAI chatbots, or experimenting with emerging tech, I thrive on creating tools that are not just functional but impactful.
+                I’m an AI Engineer with a background in Electrical & Computer Engineering, focused on building intelligent systems that tackle real-world sustainability and data-centric challenges. From time-series forecasting and air quality prediction to building LLM-based chatbots, I’m driven to apply machine learning where it matters most.
               </p>
               <p className="text-muted-foreground text-lg mb-6">
-               My interests span from deep learning and time-series forecasting to natural language processing and trustworthy AI. I enjoy merging technical depth with practical application, blending a researcher’s mindset with an engineer’s drive to build.
+                My technical toolkit spans deep learning, GenAI, NLP, and MLOps—including tools like LangChain, HuggingFace, Azure OpenAI, and hybrid model architectures. Whether working on smart energy dashboards, environmental risk prediction, or ESG data automation, I love merging technical rigor with human impact.
               </p>
               <p className="text-muted-foreground text-lg mb-6">
-                I’m a lifelong learner, driven by curiosity, critical thinking, and a desire to shape technology that matters — whether that’s deploying scalable ML pipelines, contributing to open-source, or exploring how LLMs can support sustainability, transparency, and digital trust.
-
+                I thrive at the intersection of AI, transparency, and trust—designing solutions that are robust, explainable, and forward-thinking. I'm always exploring how to make AI not only smarter, but more socially responsible and practically deployable.
               </p>
-
               <Button
                 onClick={() => {
                   window.open('https://drive.google.com/uc?export=download&id=1xxwb9vy1vTtx9auZYjoyTwlU9Aaqm1Ve', '_blank');
