@@ -1,7 +1,8 @@
 "use client"
 import { Card, CardContent } from "@/components/ui/card"
-import { Cpu, BarChart3, BrainCircuit, Cloud, Code, Database, Terminal } from "lucide-react";
-import { motion } from "framer-motion"
+import { Code, Database, Layout, Server, Smartphone, GitBranch, Figma } from "lucide-react"
+import { motion } from 'framer-motion'
+
 
 export function Skills() {
   const skills = [
@@ -81,7 +82,7 @@ export function Skills() {
     },
   ]
 
-  return (
+    return (
     <motion.section
       id="section"
       className="py-24 px-4"
