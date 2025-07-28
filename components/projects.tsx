@@ -14,21 +14,19 @@ export function Projects() {
   const [showAll, setShowAll] = useState(false);
   const projects = [
     {
-      title: "Residential Load Forecasting",
+      title: "Smart Energy Forecasting with LSTM + XGBoost",
       description:
-        "Developed a hybrid LSTM + XGBoost model with transfer learning to forecast hourly residential power load, improving accuracy by 75% over baselines. ",
+        "Built a hybrid LSTM-XGBoost model with clustering and transfer learning to forecast residential power load from smart meter data. Improved forecast accuracy by over 75% and reduced sMAPE, MAE, and RMSE.",
       image: "/images/rlf.png",
-      tags: ["Python", "TensorFlow (LSTM)", "XGBoost"],
-      //liveUrl: "https://class-job-seeker.vercel.app/",
+      tags: ["Python", "TensorFlow", "XGBoost", "Transfer Learning", "Smart Meter"],
       githubUrl: "https://github.com/nnr2611/Residential-Energy-Forecasting-LSTM-XGBoost-hybrid-model",
     },
     {
-      title: "Air quality Predictor",
+      title: "PM2.5 Air Quality Prediction (Multi-Site)",
       description:
-        "Built a real-time forecasting tool for PM2.5/PM10 levels using time-series ML and Random Forest Regression. Features a Flask dashboard with interactive graphs.",
+        "Forecasted particulate matter (PM2.5/PM10) levels using Random Forest Regression across 12 Beijing monitoring stations. Achieved 22% MAPE reduction and 18% better early-warning accuracy.",
       image: "/images/airquality.png",
-      tags: ["Python", "Scikit-learn", "Flask", "Pandas", "Matplotlib"],
-      //liveUrl: "https://dunderdebunk.pages.dev/",
+      tags: ["Scikit-learn", "Pandas", "Flask", "Random Forest", "Time Series"],
       githubUrl: "https://github.com/nnr2611/Air-Pollution-prediction",
     },
     {/*
