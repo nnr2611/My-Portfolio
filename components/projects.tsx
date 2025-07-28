@@ -5,13 +5,12 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Github } from "lucide-react"
-import { useState } from "react";
+import { useState } from "react"
 import { motion } from "framer-motion"
 
-
 export function Projects() {
+  const SHOW_LEGACY_PROJECTS = true
 
-  const [showAll, setShowAll] = useState(false);
   const projects = [
     {
       title: "Smart Energy Forecasting with LSTM + XGBoost",
@@ -19,7 +18,8 @@ export function Projects() {
         "Built a hybrid LSTM-XGBoost model with clustering and transfer learning to forecast residential power load from smart meter data. Improved forecast accuracy by over 75% and reduced sMAPE, MAE, and RMSE.",
       image: "/images/rlf.png",
       tags: ["Python", "TensorFlow", "XGBoost", "Transfer Learning", "Smart Meter"],
-      githubUrl: "https://github.com/nnr2611/Residential-Energy-Forecasting-LSTM-XGBoost-hybrid-model",
+      githubUrl:
+        "https://github.com/nnr2611/Residential-Energy-Forecasting-LSTM-XGBoost-hybrid-model",
     },
     {
       title: "PM2.5 Air Quality Prediction (Multi-Site)",
@@ -29,32 +29,7 @@ export function Projects() {
       tags: ["Scikit-learn", "Pandas", "Flask", "Random Forest", "Time Series"],
       githubUrl: "https://github.com/nnr2611/Air-Pollution-prediction",
     },
-    {/*
-      title: "PixTag",
-      description:
-        "An AWS-powered serverless image tagging and storage system with YOLO-based object detection and API-driven tag management.",
-      image: "/images/pixtag.jpg",
-      tags: ["AWS Lambda", "DynamoDB", "S3", "Python", "JavaScript", "YOLO"],
-      // liveUrl: "#",
-      githubUrl: "#",
-    */},
-    {/*
-      title: "MealMate - Android Diet Planner",
-      description:
-        "A personalized diet planner app with Firebase login, Edamam API integration, and dynamic meal suggestions using Kotlin & Jetpack Compose.",
-      image: "/images/mealmate.jpg",
-      tags: ["Kotlin", "Jetpack Compose", "Firebase", "Edamam API", "Android"],
-      githubUrl: "#",
-    */},
-    {/*
-      title: "PETris - PET Scan Appointment Platform",
-      description:
-        "A fullstack booking platform for medical imaging services built with ASP.NET MVC and MS SQL, increasing clinic revenue and efficiency.",
-      image: "/images/petris.jpg",
-      tags: ["C#", "ASP.NET MVC", "MS SQL", "JavaScript", "HTML", "CSS"],
-      githubUrl: "#",
-    */},
-    {
+    SHOW_LEGACY_PROJECTS && {
       title: "Motor Controller for Switched Reluctance Motor",
       description:
         "Designed a compact motor controller to eliminate torque ripple and improve SRM efficiency beyond 85%. Won Best Final Year Project.",
@@ -62,7 +37,7 @@ export function Projects() {
       tags: ["Embedded Systems", "Motor Control", "Hardware Design", "DC Systems"],
       githubUrl: "#",
     },
-    {
+    SHOW_LEGACY_PROJECTS && {
       title: "IoT Kitchen Fire Prevention System",
       description:
         "Developed an infrared sensor-based system to detect human absence near an active gas stove, alerting users to prevent fire hazards.",
@@ -70,15 +45,17 @@ export function Projects() {
       tags: ["IoT", "Infrared Sensors", "Embedded", "Python"],
       githubUrl: "#",
     },
-    {
+    SHOW_LEGACY_PROJECTS && {
       title: "Formula Bharat Electric Car",
       description:
         "Designed and fabricated an electric vehicle for FSEV 2020 using BLDC motor and CAN bus controller. Focused on safety and performance.",
       image: "/images/formula-ev.jpg",
       tags: ["Electric Vehicles", "CAN Bus", "Embedded Systems", "Battery Systems"],
     },
-  ]
-  const visibleProjects = showAll ? projects : projects.slice(0, 3);
+  ].filter(Boolean)
+
+  const [showAll, setShowAll] = useState(false)
+  const visibleProjects = showAll ? projects : projects.slice(0, 3)
 
   return (
     <motion.section
@@ -120,12 +97,16 @@ export function Projects() {
                   <div className="flex gap-4 mt-4">
                     {project.liveUrl && (
                       <Button asChild>
-                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                          Live Demo
+                        </a>
                       </Button>
                     )}
                     {project.githubUrl && (
                       <Button asChild variant="outline">
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                          GitHub
+                        </a>
                       </Button>
                     )}
                   </div>
@@ -142,5 +123,5 @@ export function Projects() {
         </div>
       </section>
     </motion.section>
-  );
+  )
 }
