@@ -1,88 +1,97 @@
 "use client"
-import { Card, CardContent } from "@/components/ui/card"
-import { Code, Database, Layout, Server, Smartphone, GitBranch, Figma } from "lucide-react"
-import { motion } from 'framer-motion'
 
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  Code,
+  TerminalSquare,
+  BrainCircuit,
+  ChartColumn,
+  Workflow,
+  Database,
+  Cpu,
+} from "lucide-react"
+import { motion } from "framer-motion"
 
 export function Skills() {
   const skills = [
-    {
-      category: "Machine Learning & AI",
-      icon: <BrainCircuit className="h-8 w-8 text-primary" />,
-      items: [
-        "Scikit-learn",
-        "TensorFlow",
-        "PyTorch",
-        "Keras",
-        "XGBoost",
-        "LightGBM",
-        "OpenCV",
-        "NLTK",
-        "SpaCy",
-        "Transformers (HF)",
-        "LangChain",
-        "RAG",
-        "Time Series Forecasting",
-        "EDA",
-      ],
-    },
-    {
-      category: "Programming & Scripting",
-      icon: <Terminal className="h-8 w-8 text-primary" />,
-      items: ["Python", "SQL", "Shell Script", "MATLAB", "C", "R"],
-    },
-    {
-      category: "Data Tools & Visualization",
-      icon: <BarChart3 className="h-8 w-8 text-primary" />,
-      items: [
-        "Power BI",
-        "Tableau",
-        "Excel",
-        "JupyterLab",
-        "Google Colab",
-        "VS Code",
-        "PyCharm",
-      ],
-    },
-    {
-      category: "Cloud & DevOps",
-      icon: <Cloud className="h-8 w-8 text-primary" />,
-      items: [
-        "AWS",
-        "Azure (OpenAI, ML Studio)",
-        "Docker",
-        "Git",
-        "GitHub",
-        "CI/CD",
-        "MLflow",
-        "Flask",
-        "Vercel",
-      ],
-    },
-    {
-      category: "Databases",
-      icon: <Database className="h-8 w-8 text-primary" />,
-      items: ["MySQL", "PostgreSQL"],
-    },
-    {
-      category: "Embedded & IoT Systems",
-      icon: <Chip className="h-8 w-8 text-primary" />,
-      items: [
-        "Embedded C",
-        "RTOS",
-        "ESP8266",
-        "LoRa",
-        "RF Sensors",
-        "GSM Modules",
-        "Smart Meter Data",
-        "Task Scheduling",
-        "IoT App Development",
-        "Sensor Integration",
-      ],
-    },
-  ]
+  {
+    category: "Programming & Scripting",
+    icon: <TerminalSquare className="h-8 w-8 text-primary" />,
+    items: ["Python", "SQL", "Shell Script", "MATLAB", "C", "R"],
+  },
+  {
+    category: "Machine Learning & AI",
+    icon: <BrainCircuit className="h-8 w-8 text-primary" />,
+    items: [
+      "Scikit-learn",
+      "TensorFlow",
+      "PyTorch",
+      "Keras",
+      "XGBoost",
+      "LightGBM",
+      "OpenCV",
+      "NLTK",
+      "SpaCy",
+      "Transformers (HF)",
+      "LangChain",
+      "RAG",
+      "Time Series Forecasting",
+      "EDA",
+    ],
+  },
+  {
+    category: "Data Tools & Visualization",
+    icon: <ChartColumn className="h-8 w-8 text-primary" />,
+    items: [
+      "Power BI",
+      "Tableau",
+      "Excel",
+      "JupyterLab",
+      "Google Colab",
+      "VS Code",
+      "PyCharm",
+      "Apache Airflow",
+    ],
+  },
+  {
+    category: "Cloud & DevOps",
+    icon: <Workflow className="h-8 w-8 text-primary" />,
+    items: [
+      "AWS",
+      "Azure (OpenAI, ML Studio)",
+      "Docker",
+      "Git",
+      "GitHub",
+      "CI/CD",
+      "MLflow",
+      "Flask",
+      "Vercel",
+    ],
+  },
+  {
+    category: "Databases",
+    icon: <Database className="h-8 w-8 text-primary" />,
+    items: ["MySQL", "PostgreSQL"],
+  },
+  {
+    category: "Embedded & IoT Systems",
+    icon: <Cpu className="h-8 w-8 text-primary" />,
+    items: [
+      "Embedded C",
+      "RTOS",
+      "ESP8266",
+      "LoRa",
+      "RF Sensors",
+      "GSM Modules",
+      "Smart Meter Data",
+      "Task Scheduling",
+      "IoT App Development",
+      "Sensor Integration",
+    ],
+  },
+]
 
-    return (
+  return (
     <motion.section
       id="section"
       className="py-24 px-4"
@@ -93,10 +102,13 @@ export function Skills() {
     >
       <section id="skills" className="py-16 md:py-24">
         <div className="container">
-          <h2 className="text-3xl font-bold text-center mb-4">Skills & Expertise</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Skills & Expertise
+          </h2>
           <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-            I've worked with a variety of technologies and frameworks in my career. Here's an overview of my technical
-            skills and areas of expertise.
+            I've worked with a variety of technologies and frameworks in my
+            career. Here's an overview of my technical skills and areas of
+            expertise.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
