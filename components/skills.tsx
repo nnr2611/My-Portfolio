@@ -1,17 +1,6 @@
 "use client"
 import { Card, CardContent } from "@/components/ui/card"
-import {
-  Code,
-  Database,
-  Layout,
-  GitBranch,
-  BrainCircuit,
-  Cloud,
-  Terminal,
-  BarChart3,
-  Cpu,
-  Chip,
-} from "lucide-react"
+import { Cpu, BarChart3, BrainCircuit, Cloud, Code, Database, Terminal } from "lucide-react";
 import { motion } from "framer-motion"
 
 export function Skills() {
