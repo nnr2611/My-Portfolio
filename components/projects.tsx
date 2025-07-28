@@ -35,7 +35,7 @@ export function Projects() {
         "Designed a compact motor controller to eliminate torque ripple and improve SRM efficiency beyond 85%. Won Best Final Year Project.",
       image: "/images/srm.jpg",
       tags: ["Embedded Systems", "Motor Control", "Hardware Design", "DC Systems"],
-      githubUrl: "#",
+      githubUrl: "https://github.com/nnr2611/SRM_Hysteresis_Controller",
     },
     SHOW_LEGACY_PROJECTS && {
       title: "IoT Kitchen Fire Prevention System",
@@ -43,7 +43,7 @@ export function Projects() {
         "Developed an infrared sensor-based system to detect human absence near an active gas stove, alerting users to prevent fire hazards.",
       image: "/images/iot-fire.jpg",
       tags: ["IoT", "Infrared Sensors", "Embedded", "Python"],
-      githubUrl: "#",
+      githubUrl: "https://github.com/nnr2611/GridEye_py_and_C",
     },
     SHOW_LEGACY_PROJECTS && {
       title: "Formula Bharat Electric Car",
@@ -52,6 +52,14 @@ export function Projects() {
       image: "/images/formula-ev.jpg",
       tags: ["Electric Vehicles", "CAN Bus", "Embedded Systems", "Battery Systems"],
     },
+      SHOW_LEGACY_PROJECTS && {
+    title: "Arduino-Based Fitness Tracker",
+    description:
+      "Built a basic fitness tracker using Arduino UNO and an accelerometer to monitor step count and calorie burn. Designed custom logic to track movements and display metrics on an OLED screen for real-time feedback.",
+    image: "/images/fitness.png", 
+    tags: ["Arduino", "C++", "Accelerometer", "OLED Display", "Embedded Systems"],
+    githubUrl: "https://github.com/nnr2611/fitness-tracker",
+  },
   ].filter(Boolean)
 
   const [showAll, setShowAll] = useState(false)
