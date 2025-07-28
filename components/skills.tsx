@@ -9,6 +9,8 @@ import {
   Cloud,
   Terminal,
   BarChart3,
+  Cpu,
+  Chip,
 } from "lucide-react"
 import { motion } from "framer-motion"
 
@@ -71,6 +73,22 @@ export function Skills() {
       category: "Databases",
       icon: <Database className="h-8 w-8 text-primary" />,
       items: ["MySQL", "PostgreSQL"],
+    },
+    {
+      category: "Embedded & IoT Systems",
+      icon: <Chip className="h-8 w-8 text-primary" />,
+      items: [
+        "Embedded C",
+        "RTOS",
+        "ESP8266",
+        "LoRa",
+        "RF Sensors",
+        "GSM Modules",
+        "Smart Meter Data",
+        "Task Scheduling",
+        "IoT App Development",
+        "Sensor Integration",
+      ],
     },
   ]
 
