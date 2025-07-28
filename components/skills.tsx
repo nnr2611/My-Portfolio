@@ -1,39 +1,76 @@
 "use client"
 import { Card, CardContent } from "@/components/ui/card"
-import { Code, Database, Layout, Server, Smartphone, GitBranch, Figma } from "lucide-react"
-import { motion } from 'framer-motion'
+import {
+  Code,
+  Database,
+  Layout,
+  GitBranch,
+  BrainCircuit,
+  Cloud,
+  Terminal,
+  BarChart3,
+} from "lucide-react"
+import { motion } from "framer-motion"
 
 export function Skills() {
   const skills = [
     {
-      category: "Frontend Development",
-      icon: <Layout className="h-8 w-8 text-primary" />,
-      items: ["HTML/CSS", "JavaScript", "React", "Next.js", "TypeScript", "Tailwind CSS", "Jetpack Compose"],
+      category: "Machine Learning & AI",
+      icon: <BrainCircuit className="h-8 w-8 text-primary" />,
+      items: [
+        "Scikit-learn",
+        "TensorFlow",
+        "PyTorch",
+        "Keras",
+        "XGBoost",
+        "LightGBM",
+        "OpenCV",
+        "NLTK",
+        "SpaCy",
+        "Transformers (HF)",
+        "LangChain",
+        "RAG",
+        "Time Series Forecasting",
+        "EDA",
+      ],
     },
     {
-      category: "Backend Development",
-      icon: <Server className="h-8 w-8 text-primary" />,
-      items: ["Python", "Django", "Flask", "Node.js", "Express", "REST APIs", "AWS Lambda"],
+      category: "Programming & Scripting",
+      icon: <Terminal className="h-8 w-8 text-primary" />,
+      items: ["Python", "SQL", "Shell Script", "MATLAB", "C", "R"],
     },
     {
-      category: "Mobile & Android Development",
-      icon: <Smartphone className="h-8 w-8 text-primary" />,
-      items: ["Kotlin", "Android Studio", "Jetpack Compose", "React Native", "Firebase"],
+      category: "Data Tools & Visualization",
+      icon: <BarChart3 className="h-8 w-8 text-primary" />,
+      items: [
+        "Power BI",
+        "Tableau",
+        "Excel",
+        "JupyterLab",
+        "Google Colab",
+        "VS Code",
+        "PyCharm",
+      ],
     },
     {
-      category: "Database & Cloud",
+      category: "Cloud & DevOps",
+      icon: <Cloud className="h-8 w-8 text-primary" />,
+      items: [
+        "AWS",
+        "Azure (OpenAI, ML Studio)",
+        "Docker",
+        "Git",
+        "GitHub",
+        "CI/CD",
+        "MLflow",
+        "Flask",
+        "Vercel",
+      ],
+    },
+    {
+      category: "Databases",
       icon: <Database className="h-8 w-8 text-primary" />,
-      items: ["SQL", "PostgreSQL", "MySQL", "MongoDB", "DynamoDB", "Firebase", "Redis", "Prisma"],
-    },
-    {
-      category: "DevOps & Tools",
-      icon: <GitBranch className="h-8 w-8 text-primary" />,
-      items: ["Git", "GitHub", "Docker", "CI/CD", "Kubernetes", "AWS", "Azure", "Vercel", "Oracle Cloud"],
-    },
-    {
-      category: "Other Technical Skills",
-      icon: <Code className="h-8 w-8 text-primary" />,
-      items: ["C", "C++", "Java", "C#", "Assembly", "Agile", "Scrum", "Software Testing", "Networking"],
+      items: ["MySQL", "PostgreSQL"],
     },
   ]
 
