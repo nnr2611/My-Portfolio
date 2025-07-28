@@ -26,7 +26,7 @@ export function About() {
             <div>
               <h3 className="text-3xl font-semibold mb-4">Who Am I</h3>
               <p className="text-muted-foreground text-lg mb-6">
-                I’m an AI Engineer with a background in Electrical & Computer Engineering, focused on building intelligent systems that tackle real-world sustainability and data-centric challenges. From time-series forecasting and air quality prediction to building LLM-based chatbots, I’m driven to apply machine learning where it matters most.
+                I’m an AI Engineer with a background in Electrical and Computer Engineering, focused on building intelligent systems that tackle real-world sustainability and data-centric challenges. From time-series forecasting and air quality prediction to building LLM-based chatbots, I’m driven to apply machine learning where it matters most.
               </p>
               <p className="text-muted-foreground text-lg mb-6">
                 My technical toolkit spans deep learning, GenAI, NLP, and MLOps—including tools like LangChain, HuggingFace, Azure OpenAI, and hybrid model architectures. Whether working on smart energy dashboards, environmental risk prediction, or ESG data automation, I love merging technical rigor with human impact.
