@@ -42,6 +42,9 @@ export function Header() {
           <Link href="#projects" className="text-sm font-medium hover:text-primary transition-colors">
             Projects
           </Link>
+          <Link href="#publications" className="text-sm font-medium hover:text-primary transition-colors">
+            Publications
+          </Link>
           <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
             Contact
           </Link>
@@ -94,6 +97,13 @@ export function Header() {
               Projects
             </Link>
             <Link
+              href="#publications"
+              className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Publications
+            </Link>
+            <Link
               href="#contact"
               className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
@@ -101,9 +111,11 @@ export function Header() {
               Contact
             </Link>
             <Link
-              href="#Whoami"
-              className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors">
-              Who am I
+              href="#whoami"
+              className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Personal Life
             </Link>
           </nav>
         </div>
