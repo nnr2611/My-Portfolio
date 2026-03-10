@@ -29,18 +29,16 @@ export function Projects() {
       "Random Forest"
     ],
     githubUrl: "https://github.com/nnr2611/Agentic_Insurance"
-  },
+   },
 
   {
-    title: "Smart Energy Forecasting with LSTM + XGBoost",
-    {
-      title: "Smart Energy Forecasting with LSTM + XGBoost",
-      description:
-        "Built a hybrid LSTM-XGBoost model with clustering and transfer learning to forecast residential power load from smart meter data. Improved forecast accuracy by over 75% and reduced sMAPE, MAE, and RMSE.",
-      image: "/images/rlf.png",
-      tags: ["Python", "TensorFlow", "XGBoost", "Transfer Learning", "Smart Meter"],
-      githubUrl:
-        "https://github.com/nnr2611/Residential-Energy-Forecasting-LSTM-XGBoost-hybrid-model",
+  title: "Smart Energy Forecasting with LSTM + XGBoost",
+  description:
+    "Built a hybrid LSTM-XGBoost model with clustering and transfer learning to forecast residential power load from smart meter data. Improved forecast accuracy by over 75% and reduced sMAPE, MAE, and RMSE.",
+  image: "/images/rlf.png",
+  tags: ["Python", "TensorFlow", "XGBoost", "Transfer Learning", "Smart Meter"],
+  githubUrl:
+    "https://github.com/nnr2611/Residential-Energy-Forecasting-LSTM-XGBoost-hybrid-model",
     },
     {
       title: "PM2.5 Air Quality Prediction (Multi-Site)",
