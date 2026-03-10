@@ -13,6 +13,27 @@ export function Projects() {
 
   const projects = [
     {
+    title: "AI Insurance Benefit Predictor (Agentic RAG)",
+    description:
+      "Developed an agentic RAG pipeline using LangGraph and LangSmith to process unstructured insurance documents. Implemented FAISS-based semantic retrieval with Pinecone and built an ensemble prediction system combining fine-tuned GPT-4o, QLoRA-fine-tuned Llama 3.1 and Random Forest, improving benefit estimation accuracy by 15%.",
+    image: "/images/insurance-ai.png",
+    tags: [
+      "LangGraph",
+      "RAG",
+      "LangSmith",
+      "FAISS",
+      "Pinecone",
+      "QLoRA",
+      "Llama 3.1",
+      "GPT-4o",
+      "Random Forest"
+    ],
+    githubUrl: "https://github.com/nnr2611/Agentic_Insurance"
+  },
+
+  {
+    title: "Smart Energy Forecasting with LSTM + XGBoost",
+    {
       title: "Smart Energy Forecasting with LSTM + XGBoost",
       description:
         "Built a hybrid LSTM-XGBoost model with clustering and transfer learning to forecast residential power load from smart meter data. Improved forecast accuracy by over 75% and reduced sMAPE, MAE, and RMSE.",
