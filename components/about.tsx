@@ -20,7 +20,7 @@ export function About() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20">
-                <Image src="/images/me.jpg?height=320&width=320" alt="Profile" fill className="object-cover" />
+                <Image src="/images/me.jpg?height=320&width=320" alt="Profile" fill className="object-cover object-top" />
               </div>
             </div>
             <div>
