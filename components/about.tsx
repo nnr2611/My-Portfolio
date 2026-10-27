@@ -26,13 +26,13 @@ export function About() {
             <div>
               <h3 className="text-3xl font-semibold mb-4">Who Am I</h3>
               <p className="text-muted-foreground text-lg mb-6">
-                I’m an AI Engineer with a background in Electrical and Computer Engineering, focused on building intelligent systems that tackle real-world sustainability and data-centric challenges. From time-series forecasting and air quality prediction to building LLM-based chatbots, I’m driven to apply machine learning where it matters most.
+                I’m an AI Engineer with a background in Electrical and Computer Engineering, focused on intelligent systems for real-world sustainability and data-centric problems. My recent work spans agentic RAG for insurance, energy and air-quality forecasting, and 3D human pose estimation, always with an eye on what it takes to deploy.
               </p>
               <p className="text-muted-foreground text-lg mb-6">
-                My technical toolkit spans deep learning, GenAI, NLP, and MLOps—including tools like LangChain, HuggingFace, Azure OpenAI, and hybrid model architectures. Whether working on smart energy dashboards, environmental risk prediction, or ESG data automation, I love merging technical rigor with human impact.
+                My toolkit spans deep learning, GenAI, NLP and MLOps, including LangGraph, LangChain, HuggingFace, Azure OpenAI, PyTorch, TensorFlow and hybrid model architectures such as LSTM + XGBoost. Whether it’s smart energy forecasting, environmental risk prediction or ESG data automation, I like pairing technical rigor with human impact.
               </p>
               <p className="text-muted-foreground text-lg mb-6">
-                I thrive at the intersection of AI, transparency, and trust—designing solutions that are robust, explainable, and forward-thinking. I'm always exploring how to make AI not only smarter, but more socially responsible and practically deployable.
+                I thrive at the intersection of AI, transparency, and trust, designing solutions that are robust, explainable, and forward-thinking. I'm always exploring how to make AI not only smarter, but more socially responsible and practically deployable.
               </p>
               <Button
                 onClick={() => {

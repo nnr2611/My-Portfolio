@@ -47,7 +47,7 @@ export function Hero() {
 
               {/* <span className="text-primary max-w-2xl mb-8 leading-relaxed"></span> <br /> */}
               <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-8">
-                AI/ML Engineer passionate about building intelligent systems with LLMs, deep learning, and real-world data. Skilled in developing and deploying scalable models for forecasting, GenAI, and data-driven applications across cloud and edge platforms.
+                AI/ML Engineer building agentic LLM systems, time-series forecasting models and computer vision pipelines. I turn real-world data into deployable, explainable AI across cloud and edge platforms.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild>

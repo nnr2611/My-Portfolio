@@ -11,75 +11,89 @@ import { motion } from "framer-motion"
 export function Projects() {
   const SHOW_LEGACY_PROJECTS = true
 
+  type Project = {
+    title: string
+    description: string
+    image: string
+    tags: string[]
+    githubUrl?: string
+    liveUrl?: string
+  }
+
   const projects = [
     {
-    title: "AI Insurance Benefit Predictor (Agentic RAG)",
-    description:
-      "Developed an agentic RAG pipeline using LangGraph and LangSmith to process unstructured insurance documents. Implemented FAISS-based semantic retrieval with Pinecone and built an ensemble prediction system combining fine-tuned GPT-4o, QLoRA-fine-tuned Llama 3.1 and Random Forest, improving benefit estimation accuracy by 15%.",
-    image: "/images/insurance-ai.png",
-    tags: [
-      "LangGraph",
-      "RAG",
-      "LangSmith",
-      "FAISS",
-      "Pinecone",
-      "QLoRA",
-      "Llama 3.1",
-      "GPT-4o",
-      "Random Forest"
-    ],
-    githubUrl: "https://github.com/nnr2611/Agentic_Insurance"
-   },
-
-  {
-  title: "Smart Energy Forecasting with LSTM + XGBoost",
-  description:
-    "Built a hybrid LSTM-XGBoost model with clustering and transfer learning to forecast residential power load from smart meter data. Improved forecast accuracy by over 75% and reduced sMAPE, MAE, and RMSE.",
-  image: "/images/rlf.png",
-  tags: ["Python", "TensorFlow", "XGBoost", "Transfer Learning", "Smart Meter"],
-  githubUrl:
-    "https://github.com/nnr2611/Residential-Energy-Forecasting-LSTM-XGBoost-hybrid-model",
+      title: "Agentic Insurance Benefit Predictor",
+      description:
+        "Agentic RAG pipeline (LangGraph + LangSmith) that reads unstructured insurance documents and estimates property-management benefits. FAISS/Pinecone retrieval feeds an ensemble of fine-tuned GPT-4o, QLoRA-tuned Llama 3.1 and Random Forest, improving benefit estimation accuracy by 15%.",
+      image: "/images/insurance-ai.png",
+      tags: ["LangGraph", "RAG", "LangSmith", "FAISS", "Pinecone", "QLoRA", "Llama 3.1", "GPT-4o"],
+      githubUrl: "https://github.com/nnr2611/Agentic_Insurance",
     },
     {
-      title: "PM2.5 Air Quality Prediction (Multi-Site)",
+      title: "MealPrep Deals",
       description:
-        "Forecasted particulate matter (PM2.5/PM10) levels using Random Forest Regression across 12 Beijing monitoring stations. Achieved 22% MAPE reduction and 18% better early-warning accuracy.",
-      image: "/images/airquality.png",
-      tags: ["Scikit-learn", "Pandas", "Flask", "Random Forest", "Time Series"],
+        "Turns your recipe books into a weekly batch-cook plan priced against live Canadian flyer deals. Claude extracts recipes and drafts the plan, while cost, calories and the shopping list are computed in code, never by the LLM. FastAPI backend, deployable on Vercel.",
+      image: "/images/mealprep.svg",
+      tags: ["Python", "FastAPI", "Claude API", "Vercel", "Pytest"],
+      githubUrl: "https://github.com/nnr2611/mealprep-deals-main",
+    },
+    {
+      title: "Efficient 3D Human Pose Estimation (HoT-style)",
+      description:
+        "Compact transformer that lifts 2D keypoints to 3D poses on Human3.6M. Prunes temporal tokens mid-network and recovers the full sequence with cross-attention, cutting compute versus the full-token baseline. Re-implementation of the Hourglass Tokenizer idea.",
+      image: "/images/hot-pose.svg",
+      tags: ["PyTorch", "Transformers", "Computer Vision", "Human3.6M", "MediaPipe"],
+      githubUrl:
+        "https://github.com/nnr2611/Efficient-3D-Human-Pose-Estimation-Using-Hourglass-Tokenizer-HoT-",
+    },
+    {
+      title: "Residential Energy Forecasting (LSTM + XGBoost)",
+      description:
+        "Hybrid LSTM-XGBoost model with clustering and transfer learning to forecast household power load from smart meter data. Improved forecast accuracy by over 75% and reduced sMAPE, MAE and RMSE.",
+      image: "/images/rlf.png",
+      tags: ["Python", "TensorFlow", "XGBoost", "Transfer Learning", "Smart Meter"],
+      githubUrl: "https://github.com/nnr2611/Residential-Energy-Forecasting-LSTM-XGBoost-hybrid-model",
+    },
+    {
+      title: "Beijing Air Pollution Prediction",
+      description:
+        "Forecasts PM2.5 and other particulate levels 24 hours to 7 days ahead from the Beijing multi-site air quality dataset. Combines LSTM temporal modelling with XGBoost regression, compared against baselines, with an interactive Streamlit dashboard for forecasts, error analysis and feature importance.",
+      image: "/images/air-pollution.svg",
+      tags: ["LSTM", "XGBoost", "Time Series", "Streamlit", "Scikit-learn"],
       githubUrl: "https://github.com/nnr2611/Air-Pollution-prediction",
     },
     SHOW_LEGACY_PROJECTS && {
-      title: "Motor Controller for Switched Reluctance Motor",
+      title: "Switched Reluctance Motor Controller",
       description:
-        "Designed a compact motor controller to eliminate torque ripple and improve SRM efficiency beyond 85%. Won Best Final Year Project.",
+        "Compact hysteresis motor controller that removes torque ripple and pushes SRM efficiency beyond 85%. Won Best Final Year Project.",
       image: "/images/srm.jpg",
-      tags: ["Embedded Systems", "Motor Control", "Hardware Design", "DC Systems"],
+      tags: ["Embedded Systems", "Motor Control", "MATLAB", "Hardware Design"],
       githubUrl: "https://github.com/nnr2611/SRM_Hysteresis_Controller",
     },
     SHOW_LEGACY_PROJECTS && {
-      title: "IoT Kitchen Fire Prevention System",
+      title: "IoT Kitchen Fire Prevention",
       description:
-        "Developed an infrared sensor-based system to detect human absence near an active gas stove, alerting users to prevent fire hazards.",
+        "Infrared (GridEYE) sensor system that detects human absence near an active gas stove and alerts users to prevent fire hazards.",
       image: "/images/iot-fire.jpg",
-      tags: ["IoT", "Infrared Sensors", "Embedded", "Python"],
+      tags: ["IoT", "Infrared Sensors", "Embedded C", "Python"],
       githubUrl: "https://github.com/nnr2611/GridEye_py_and_C",
     },
     SHOW_LEGACY_PROJECTS && {
       title: "Formula Bharat Electric Car",
       description:
-        "Designed and fabricated an electric vehicle for FSEV 2020 using BLDC motor and CAN bus controller. Focused on safety and performance.",
+        "Designed and fabricated an electric vehicle for FSEV 2020 using a BLDC motor and CAN bus controller, with a focus on safety and performance.",
       image: "/images/formula-ev.jpg",
       tags: ["Electric Vehicles", "CAN Bus", "Embedded Systems", "Battery Systems"],
     },
-      SHOW_LEGACY_PROJECTS && {
-    title: "Arduino-Based Fitness Tracker",
-    description:
-      "Built a basic fitness tracker using Arduino UNO and an accelerometer to monitor step count and calorie burn. Designed custom logic to track movements and display metrics on an OLED screen for real-time feedback.",
-    image: "/images/fitness.png", 
-    tags: ["Arduino", "C++", "Accelerometer", "OLED Display", "Embedded Systems"],
-    githubUrl: "https://github.com/nnr2611/fitness-tracker",
-  },
-  ].filter(Boolean)
+    SHOW_LEGACY_PROJECTS && {
+      title: "Arduino Fitness Tracker",
+      description:
+        "Step counter and calorie tracker on an Arduino UNO with an accelerometer, with custom movement logic and real-time metrics on an OLED display.",
+      image: "/images/fitness.png",
+      tags: ["Arduino", "C++", "Accelerometer", "OLED Display"],
+      githubUrl: "https://github.com/nnr2611/fitness-tracker",
+    },
+  ].filter(Boolean) as Project[]
 
   const [showAll, setShowAll] = useState(false)
   const visibleProjects = showAll ? projects : projects.slice(0, 3)
@@ -93,11 +107,11 @@ export function Projects() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ amount: 0.2 }}
     >
-      <section id="projects" className="py-16 md:py-24 bg-muted/30">
+      <div className="py-16 md:py-24 bg-muted/30">
         <div className="container">
           <h2 className="text-3xl font-bold text-center mb-4">Featured Projects</h2>
           <p className="text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-            Here are some of my recent projects. Each one presented unique challenges and opportunities for growth.
+            Selected work in applied AI, machine learning and embedded systems. Each project links to its source on GitHub.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -148,7 +162,7 @@ export function Projects() {
             </Button>
           </div>
         </div>
-      </section>
+      </div>
     </motion.section>
   )
 }

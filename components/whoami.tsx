@@ -25,7 +25,7 @@ export function Whoami() {
     {
       title: "Soul Food & Stove Time",
       items: ["Cooking"],
-      description: "Creating comfort on a plate—my way of winding down.",
+      description: "Creating comfort on a plate, my way of winding down.",
       image: "/images/cooking_time.png"
     },
     {
@@ -37,13 +37,13 @@ export function Whoami() {
     {
       title: "Stories & Screens",
       items: ["Manga", "Webtoons", "Anime", "K-Dramas", "English Series"],
-      description: "I get lost in stories—flipping manga, bingeing anime, and exploring great dramas.",
+      description: "I get lost in stories: flipping manga, bingeing anime, and exploring great dramas.",
       image: "/images/story_binge.png"
     },
     {
       title: "Sounds of My World",
       items: ["Instrumental", "Soundtracks", "Pop", "R&B"],
-      description: "Life is better with a soundtrack—from orchestral scores to chill pop and R&B.",
+      description: "Life is better with a soundtrack, from orchestral scores to chill pop and R&B.",
       image: "/images/music_wave.png"
     },
   ];
