@@ -36,7 +36,7 @@ export function About() {
               </p>
               <Button
                 onClick={() => {
-                  window.open('https://drive.google.com/uc?export=download&id=1xxwb9vy1vTtx9auZYjoyTwlU9Aaqm1Ve', '_blank');
+                  window.open('https://drive.google.com/file/d/15sxhdInqMkfQRtVL6LHnOEL4MI1pdJBC/view?usp=sharing', '_blank');
                 }}
               >
                 <Download className="h-4 w-4 mr-2" />
