@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Phone, MapPin, Send } from "lucide-react"
+import { Mail, MapPin, Send } from "lucide-react"
 import emailjs from 'emailjs-com'
 import { motion } from 'framer-motion'
 
@@ -88,16 +88,6 @@ export function Contact() {
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
                       nithishragav2611@gmail.com
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <Phone className="h-5 w-5 text-primary mt-0.5" />
-                  <div>
-                    <p className="font-medium">Phone</p>
-                    <a href="tel:+15873979364" className="text-muted-foreground hover:text-primary transition-colors">
-                      +15873979364
                     </a>
                   </div>
                 </div>
