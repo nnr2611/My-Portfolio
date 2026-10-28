@@ -32,7 +32,7 @@ export function Hero() {
             <div className="container flex flex-col items-center text-center">
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
 
-                <span className="text-primary max-w-2xl mb-8 leading-relaxed">Hello there, I am</span> <br />
+                <span className="text-muted-foreground max-w-2xl mb-8 leading-relaxed">Hello there, I am</span> <br />
 
                 <GlitchText
                   speed={1}

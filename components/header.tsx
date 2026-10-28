@@ -45,11 +45,11 @@ export function Header() {
           <Link href="#publications" className="text-sm font-medium hover:text-primary transition-colors">
             Publications
           </Link>
-          <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
-            Contact
-          </Link>
           <Link href="#whoami" className="text-sm font-medium hover:text-primary transition-colors">
             Personal Life
+          </Link>
+          <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
+            Contact
           </Link>
         </nav>
 
@@ -104,18 +104,18 @@ export function Header() {
               Publications
             </Link>
             <Link
-              href="#contact"
-              className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact
-            </Link>
-            <Link
               href="#whoami"
               className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Personal Life
+            </Link>
+            <Link
+              href="#contact"
+              className="px-4 py-2 text-sm font-medium hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
             </Link>
           </nav>
         </div>
