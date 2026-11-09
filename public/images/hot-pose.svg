@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" font-family="Inter, Arial, sans-serif">
+  <rect width="640" height="360" rx="16" fill="#f1f4fb"/>
+  <text x="320" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#1e2a52">Hourglass Tokenizer 3D Pose</text>
+  <text x="320" y="60" text-anchor="middle" font-size="12" fill="#5b6485">Prune tokens in the middle, recover the full sequence at the end</text>
+  <defs><marker id="a" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4a5fd0"/></marker></defs>
+  <!-- 2D skeleton -->
+  <g stroke="#4a5fd0" stroke-width="3" stroke-linecap="round" fill="none">
+    <path d="M80 100v50M80 120l-22 22M80 120l22 22M58 142l-6 24M102 142l6 24M80 150l-14 30l-4 36M80 150l14 30l4 36"/>
+  </g>
+  <g fill="#1e2a52"><circle cx="80" cy="90" r="11"/><circle cx="80" cy="120" r="4"/><circle cx="58" cy="142" r="4"/><circle cx="102" cy="142" r="4"/><circle cx="80" cy="150" r="4"/><circle cx="66" cy="180" r="4"/><circle cx="94" cy="180" r="4"/></g>
+  <text x="80" y="250" text-anchor="middle" font-size="13" font-weight="600" fill="#1e2a52">2D keypoints</text>
+  <text x="80" y="267" text-anchor="middle" font-size="11" fill="#5b6485">27-frame window</text>
+  <!-- tokens hourglass -->
+  <g fill="#4a5fd0">
+    <g opacity=".45"><rect x="180" y="110" width="16" height="16" rx="3"/><rect x="200" y="110" width="16" height="16" rx="3"/><rect x="220" y="110" width="16" height="16" rx="3"/><rect x="240" y="110" width="16" height="16" rx="3"/><rect x="260" y="110" width="16" height="16" rx="3"/><rect x="280" y="110" width="16" height="16" rx="3"/><rect x="300" y="110" width="16" height="16" rx="3"/><rect x="320" y="110" width="16" height="16" rx="3"/><rect x="340" y="110" width="16" height="16" rx="3"/></g>
+    <rect x="230" y="165" width="26" height="26" rx="4"/><rect x="262" y="165" width="26" height="26" rx="4"/><rect x="294" y="165" width="26" height="26" rx="4"/>
+    <g opacity=".45"><rect x="180" y="230" width="16" height="16" rx="3"/><rect x="200" y="230" width="16" height="16" rx="3"/><rect x="220" y="230" width="16" height="16" rx="3"/><rect x="240" y="230" width="16" height="16" rx="3"/><rect x="260" y="230" width="16" height="16" rx="3"/><rect x="280" y="230" width="16" height="16" rx="3"/><rect x="300" y="230" width="16" height="16" rx="3"/><rect x="320" y="230" width="16" height="16" rx="3"/><rect x="340" y="230" width="16" height="16" rx="3"/></g>
+  </g>
+  <path d="M215 130l30 32M320 130l-30 32M245 195l-30 32M290 195l30 32" stroke="#4a5fd0" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="335" y="152" text-anchor="start" font-size="11" fill="#1e2a52" font-weight="600">PRUNE 27 → 9</text>
+  <text x="335" y="216" text-anchor="start" font-size="11" fill="#1e2a52" font-weight="600">RECOVER → 27</text>
+  <text x="268" y="283" text-anchor="middle" font-size="13" font-weight="600" fill="#1e2a52">Transformer blocks</text>
+  <!-- 3D skeleton -->
+  <g transform="translate(420,0)">
+    <path d="M70 130l90-10v100l-90 10z" fill="#e0e6fa" stroke="#b9c4f0"/>
+    <g stroke="#d8553f" stroke-width="3" stroke-linecap="round" fill="none">
+      <path d="M120 100v50M120 120l-24 16M120 120l24 -4M96 136l-8 26M144 116l6 26M120 150l-12 30l-2 36M120 150l16 28l8 38"/>
+    </g>
+    <g fill="#1e2a52"><circle cx="120" cy="90" r="11"/><circle cx="120" cy="120" r="4"/><circle cx="96" cy="136" r="4"/><circle cx="144" cy="116" r="4"/><circle cx="120" cy="150" r="4"/><circle cx="108" cy="180" r="4"/><circle cx="136" cy="178" r="4"/></g>
+    <text x="120" y="250" text-anchor="middle" font-size="13" font-weight="600" fill="#1e2a52">3D pose</text>
+    <text x="120" y="267" text-anchor="middle" font-size="11" fill="#5b6485">17 joints, Human3.6M</text>
+  </g>
+  <path d="M125 170h40" stroke="#4a5fd0" stroke-width="2.5" marker-end="url(#a)"/><path d="M375 170h40" stroke="#4a5fd0" stroke-width="2.5" marker-end="url(#a)"/>
+</svg>

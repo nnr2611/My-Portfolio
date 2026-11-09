@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --background: #05070f;
+  --foreground: #e6e9f2;
+  --muted: #9aa3b8; /* contrast on #05070f is ~8:1 */
+  --border: rgba(140, 160, 255, 0.16);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: #5cf2b4; /* aurora green-teal */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  font-size: 112.5%; /* one step up: 16px -> 18px base, scales every rem-based size */
+
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Cards: thin border with a faint glow that brightens on hover */
+.glow-card {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 0 1px rgba(110, 200, 255, 0.02), 0 0 24px rgba(110, 160, 255, 0.06);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.glow-card:hover {
+  border-color: rgba(110, 220, 255, 0.4);
+  box-shadow: 0 0 28px rgba(110, 200, 255, 0.16);
+}
+
+/* Section fade-in on scroll (CSS only; skipped for reduced motion or unsupported browsers) */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 30%;
+    }
+  }
+}
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
