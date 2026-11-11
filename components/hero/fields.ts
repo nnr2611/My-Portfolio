@@ -65,6 +65,8 @@ export type Whirlpools = Field & {
   absorbs(x: number, y: number): boolean;
   /** How many whirlpools are currently visible. */
   active(): number;
+  /** Change how many whirlpools exist (applied on the next update). */
+  setCount(n: number): void;
 };
 
 /**
@@ -80,6 +82,7 @@ export function createWhirlpools(count = 5): Whirlpools {
   const markers: Marker[] = [];
   let lastT = -1;
   let s = 1;
+  let target = count;
 
   function respawn(sl: Slot, w: number, h: number, stagger: boolean) {
     sl.x = w * (0.08 + 0.84 * Math.random());
@@ -96,13 +99,15 @@ export function createWhirlpools(count = 5): Whirlpools {
     markers,
     update(t, w, h) {
       s = sizeScale(w, h);
-      if (slots.length === 0) {
-        for (let i = 0; i < count; i++) {
-          const sl: Slot = { x: 0, y: 0, age: 0, life: 1, sign: 1, r: 150, e: 0 };
-          respawn(sl, w, h, true);
-          slots.push(sl);
-          markers.push({ x: -9999, y: 0, r: 0, color: "rgba(120,255,190,0.8)", label: "whirlpool" });
-        }
+      while (slots.length < target) {
+        const sl: Slot = { x: 0, y: 0, age: 0, life: 1, sign: 1, r: 150, e: 0 };
+        respawn(sl, w, h, true);
+        slots.push(sl);
+        markers.push({ x: -9999, y: 0, r: 0, color: "rgba(120,255,190,0.8)", label: "whirlpool" });
+      }
+      while (slots.length > target) {
+        slots.pop();
+        markers.pop();
       }
       const dt = lastT < 0 ? 0 : Math.max(0, t - lastT);
       lastT = t;
@@ -150,6 +155,9 @@ export function createWhirlpools(count = 5): Whirlpools {
         if (dx * dx + dy * dy < rr * rr) return true;
       }
       return false;
+    },
+    setCount(n) {
+      target = Math.max(0, Math.round(n));
     },
     active() {
       let n = 0;

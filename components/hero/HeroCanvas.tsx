@@ -5,12 +5,14 @@ import { createFieldSet, curlAngle, sumForces, type Vec } from "./fields";
 // ink.ts is reused as the "foam" pool: bright specks the cursor stirs up, advected by the same water.
 import { clearInk, createInkPool, INK_CAP, INK_LIFE, spawnInk } from "./ink";
 import { buildAuroraLut, LUT_SIZE } from "./palettes";
+import { MAX_PARTICLES, MIN_PARTICLES, PARTICLES_EVENT } from "./events";
 
 const BG = "#05070f";
 const FADE = "rgba(5,7,15,0.09)";
 const MAX_SPEED = 3;
 const FRAME_MS = 1000 / 60;
 const GRID = 16; // px between force-grid nodes
+const DENSITY_REF = 3500; // particle count the look is tuned for
 const MAX_LIFE = 1200; // frames before a particle respawns
 const RIPPLES = 14;
 const RIPPLE_LIFE = 36; // frames
@@ -51,6 +53,10 @@ export default function HeroCanvas() {
     let gfy = new Float32Array(0);
     const acc: Vec = [0, 0]; // shared scratch for summed forces
 
+    let userCount: number | null = null; // set by the particle input
+    let alphaMul = 1;
+    let lineW = 1.1;
+
     let tSim = 0; // simulated seconds (does not jump after a pause)
     let foamPhase = 0;
     let frameNo = 0;
@@ -81,6 +87,7 @@ export default function HeroCanvas() {
     });
 
     function particleCount(): number {
+      if (userCount !== null) return userCount;
       const base = w < 768 ? 500 : 4000;
       const areaFactor = Math.max(0.4, Math.min(1, (w * h) / (1280 * 720)));
       const cores = navigator.hardwareConcurrency || 8;
@@ -104,7 +111,14 @@ export default function HeroCanvas() {
       ctx!.fillStyle = BG;
       ctx!.fillRect(0, 0, w, h);
 
+      allocParticles();
+      if (reduced) renderStatic();
+    }
+
+    /** (Re)create particles and the force grid for the current size and particle count. */
+    function allocParticles() {
       count = particleCount();
+      applyDensity();
       px = new Float32Array(count);
       py = new Float32Array(count);
       pvx = new Float32Array(count);
@@ -121,8 +135,20 @@ export default function HeroCanvas() {
       gfy = new Float32Array(gcols * grows);
       clearInk(foam);
       rage.fill(RIPPLE_LIFE);
-      readouts.get("count")?.replaceChildren(String(count));
-      if (reduced) renderStatic();
+      const countEl = readouts.get("count");
+      if (countEl instanceof HTMLInputElement) countEl.value = String(count);
+      else countEl?.replaceChildren(String(count));
+    }
+
+    /**
+     * The field adapts to how many particles there are (reference: DENSITY_REF):
+     * denser = thinner, dimmer lines and more whirlpools; sparser = bolder lines and fewer whirlpools.
+     */
+    function applyDensity() {
+      const d = count / DENSITY_REF;
+      alphaMul = Math.max(0.35, Math.min(1, 1 / Math.sqrt(d)));
+      lineW = 1.1 * Math.max(0.8, Math.min(1.8, 1 / Math.sqrt(d)));
+      whirlpools.setCount(Math.max(2, Math.min(8, Math.round(2 + d * 2.5))));
     }
 
     /** One simulation + draw step. dt is in 60fps frame units. */
@@ -147,7 +173,7 @@ export default function HeroCanvas() {
 
       // --- water particles: short line segments (previous -> current position), like streamlines
       const damp = Math.pow(0.96, dt);
-      c.lineWidth = 1.1;
+      c.lineWidth = lineW;
       for (let i = 0; i < count; i++) {
         const x0 = px[i];
         const y0 = py[i];
@@ -191,7 +217,7 @@ export default function HeroCanvas() {
           ((Math.atan2(vy, vx) + Math.PI) / (2 * Math.PI)) * 0.35 +
           Math.min(1, Math.sqrt(sp2) / MAX_SPEED) * 0.25 +
           bands * 0.4;
-        c.globalAlpha = life < 20 ? life / 20 : 1;
+        c.globalAlpha = (life < 20 ? life / 20 : 1) * alphaMul;
         c.strokeStyle = LUT[(u * (LUT_SIZE - 1)) | 0];
         c.beginPath();
         c.moveTo(x0, y0);
@@ -420,6 +446,16 @@ export default function HeroCanvas() {
       lastMoveT = 0;
     }
 
+    // --- particle count from the input (see ParticleInput)
+    function onSetParticles(e: Event) {
+      const n = Number((e as CustomEvent<number>).detail);
+      if (!Number.isFinite(n)) return;
+      userCount = Math.max(MIN_PARTICLES, Math.min(MAX_PARTICLES, Math.round(n)));
+      allocParticles();
+      if (reduced) renderStatic();
+    }
+    window.addEventListener(PARTICLES_EVENT, onSetParticles);
+
     // --- debounced resize
     let resizeTimer = 0;
     function onResize() {
@@ -452,6 +488,7 @@ export default function HeroCanvas() {
       window.clearTimeout(resizeTimer);
       io.disconnect();
       window.removeEventListener("resize", onResize);
+      window.removeEventListener(PARTICLES_EVENT, onSetParticles);
       document.removeEventListener("visibilitychange", sync);
       host.removeEventListener("pointermove", onPointer);
       host.removeEventListener("pointerdown", onPointer);
